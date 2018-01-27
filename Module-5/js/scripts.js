@@ -20,22 +20,21 @@ const keyboard = {
     currentLang: ''
 };
 
-
 function choise (){
-
+  
     const choiceLanguage = prompt("Введите число от 0 до 2", "");
 
     if (choiceLanguage == 0){
         console.log(keyboard.langs[0]);
-        keyboard.currentLang = "0 - en";
+        keyboard.currentLang = "en";
         console.log(keyboard);
     } else if (choiceLanguage == 1){
         console.log(keyboard.langs[1]);
-        keyboard.currentLang = "1 - ru";
+        keyboard.currentLang = "ru";
         console.log(keyboard);
     } else if (choiceLanguage == 2){
         console.log(keyboard.langs[2]);
-        keyboard.currentLang = "2 - ua";
+        keyboard.currentLang = "ua";
         console.log(keyboard);
     } else if (choiceLanguage > 2 || choiceLanguage < 0 || typeof choiceLanguage == "string"){
         alert('Вы выбрали недоступный язык. Повторите попытку');
@@ -47,15 +46,18 @@ function choise (){
 
 choise();
 
-// function test (){
-//     for (let key in keyboard){
-//         if (keyboard.currentLang = "0 - en"){
-//             let a = Math.floor(Math.random() * layouts["en"].length);
-//             console.log(topRow[a]);
-//         } else{
-//             return ("no");
-//         }
-//     }
-// }
-//
-// test ();
+let testLang = keyboard.layouts[keyboard.currentLang];
+
+ function getRandCharInAlph(obj) {
+    let arr = [];
+    for (let key in obj) {
+        arr = arr.concat(obj[key]);
+    }
+    let randomItem = Math.floor(Math.random()*arr.length) ;
+    let random = arr[randomItem];
+    return random;
+}
+ 
+
+getRandCharInAlph(testLang);
+console.log(getRandCharInAlph(testLang));
