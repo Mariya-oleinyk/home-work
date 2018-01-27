@@ -31,11 +31,11 @@ function choise (){
         console.log(keyboard);
     } else if (choiceLanguage == 1){
         console.log(keyboard.langs[1]);
-        keyboard.currentLang = "0 - ru";
+        keyboard.currentLang = "1 - ru";
         console.log(keyboard);
     } else if (choiceLanguage == 2){
         console.log(keyboard.langs[2]);
-        keyboard.currentLang = "0 - ua";
+        keyboard.currentLang = "2 - ua";
         console.log(keyboard);
     } else if (choiceLanguage > 2 || choiceLanguage < 0 || typeof choiceLanguage == "string"){
         alert('Вы выбрали недоступный язык. Повторите попытку');
