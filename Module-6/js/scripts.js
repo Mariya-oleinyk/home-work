@@ -44,11 +44,11 @@ let keyTrainer = {
     }
 }
 
-// keyTrainer.setCharCount();
-// keyTrainer.checkPositiveInteger();
-// console.log(keyTrainer.checkPositiveInteger());
-// keyTrainer.createTask();
-// keyTrainer.startTask();
-// keyTrainer.userErrors();
-// console.log(keyTrainer.userErrors());
-// console.log(keyTrainer);
+keyTrainer.setCharCount();
+keyTrainer.checkPositiveInteger();
+console.log(keyTrainer.checkPositiveInteger());
+keyTrainer.createTask();
+keyTrainer.startTask();
+keyTrainer.userErrors();
+console.log(keyTrainer.userErrors());
+console.log(keyTrainer);
