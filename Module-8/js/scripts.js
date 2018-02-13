@@ -9,7 +9,6 @@ const buttons = Array.from(document.querySelectorAll("button"));
 const keys = "qwertyuiop[]asdfghjkl;'zxcvbnm,./".split("");
 
 window.addEventListener('keydown', function(e){
-
     if(keys.includes(e.key)){
      let currentButton = buttons.find((a) => a.innerHTML === e.key || a.innerHTML === "space" )
          currentButton.classList.add('keyboard__btn--active');
@@ -18,7 +17,6 @@ window.addEventListener('keydown', function(e){
          if(soundCheckbox.checked){
             playSound(currentButton.dataset.note);
          }
-
 });
 
 
