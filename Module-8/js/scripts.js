@@ -10,7 +10,7 @@ const keys = "qwertyuiop[]asdfghjkl;'zxcvbnm,./".split("");
   window.addEventListener("keydown", function callback (e){
         if(keys.includes(e.key)){
             let currentButton = buttons.find((a) => a.innerHTML === e.key || a.innerHTML === "space" );
-            currentButton.classList.add('keyboard__btn--active');
+            let note = currentButton.classList.add('keyboard__btn--active');
             setTimeout(()=>currentButton.classList.remove('keyboard__btn--active'), 100);
             let soundCheckbox = document.getElementById('slideThree');
          
