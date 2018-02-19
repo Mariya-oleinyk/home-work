@@ -23,7 +23,7 @@ const keyboard = [firstArr, secondArr, thirdArr];
 
 
 const obj = {
-    note: ["do", "re", "mi", "fa", "sol","la", "si"],
+    notes: ["do", "re", "mi", "fa", "sol","la", "si"],
     row: [firstArr, secondArr, thirdArr]
 }
 
