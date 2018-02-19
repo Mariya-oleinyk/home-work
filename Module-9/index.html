@@ -20,7 +20,7 @@
             <% keyboard.forEach(row => { %>
                 <div class=keyboard__row>
                     <% row.forEach (item => { %>
-                        <% let notesCount = 0 %>
+                        <% let notesCount = 0; %>
                         <button class="keyboard__btn" data-note="<%- obj.notes[notesCount] %>"><%- item %></button>
                         <% notesCount++
                         if(notesCount == 7)
