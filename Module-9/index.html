@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>About Us</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylaesheet" href="css/styles.css">
 
 </head>
 <body>
@@ -16,13 +16,13 @@
     <script type="text/template" id="menu">
         <div class="keyboard">
             <% keyboard.row.forEach(row => { %>
-                <div class=keyboard__row>
+                <% let a = 0 %>
+                <div class=keyboard__row>                    
                     <% row.forEach (item => { %>
-                        <% let notesCount = 0; 
-                        notesCount++;%>
-                        <button class="keyboard__btn" data-note="<%- notes[notesCount] %>"><%- item %></button> 
-                        <% if(notesCount == 7)
-                        notesCount = 0 %>
+                        <button class="keyboard__btn" data-note="<%- keyboard.notes[a] %>"><%- item %></button>
+                        <% a++; %>
+                        <% if (a == 7){
+                        a = 0};%>
                     <% }); %>
                 </div>
             <% }); %>
