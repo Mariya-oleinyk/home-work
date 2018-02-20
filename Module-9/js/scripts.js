@@ -19,18 +19,18 @@ const firstArr = firstLine.split('');
 const secondArr = secondLine.split('');
 const thirdArr = thirdLine.split('');
 
-const keyboard = [firstArr, secondArr, thirdArr];
+// const keyboard = [firstArr, secondArr, thirdArr];
 
 
-const obj = {
-    notes: ["do", "re", "mi", "fa", "sol","la", "si"],
-    row: [firstArr, secondArr, thirdArr]
+const keyboard = {
+  row: [firstArr, secondArr, thirdArr],  
+  notes: ["do", "re", "mi", "fa", "sol","la", "si"]    
 }
 
 const html = document.getElementById('menu').textContent.trim();
 const wrapper = document.getElementById('wrapper');
 const compiled = _.template(html);
-const result = compiled(obj);
+const result = compiled(keyboard);
 wrapper.innerHTML = result;
 
 
@@ -50,7 +50,6 @@ const playSound = note => {
               let note = currentButton.classList.add('keyboard__btn--active');
               setTimeout(()=>currentButton.classList.remove('keyboard__btn--active'), 100);
               let soundCheckbox = document.getElementById('slideThree');
-           
         if(soundCheckbox.checked){
               playSound(currentButton.dataset.note);
            }
