@@ -63,11 +63,11 @@ function countKPS() {
   let a = lang.split("");
   let b = userInput.value.split("");
   let c = 0;
-  if (a == b) {
+  if (a == b) { //вот тут если я ввожу верную строку, то строко "молодец...." - не выводится, а если заменяю на a = b, то выводит, но на все что я ввожу - и правильное и неправильное)))
       let test = document.createElement("p");
       test.textContent = "Вы молодец! Введено все правильно!";
       keyboard.appendChild(test);
-      localStorage.setItem('userInput',`${test.textContent}`); 
+      localStorage.setItem('userInput',`${test.textContent}`);// правильно ли  я использовала  localStorage? или надо было через функцию? и ничего что этот localStorage перезатирает, тот что был выше???
       localStorage.getItem('userInput'); 
   } else {
       for (let i = 0; i < a.length; i++) {
@@ -78,9 +78,8 @@ function countKPS() {
               keyboard.appendChild(test);
               localStorage.setItem('userInput',`${test.textContent}`); 
               localStorage.getItem('userInput'); 
-             // localStorage.removeItem('test'); // удалит пару из хранилища
             //  let attempt = 5;
-            //  for( let j=0; j< attempt; j++){
+            //  for( let j=0; j< attempt; j++){ // вот тут я думаю надо сдеалть цикл, который пересматривает все введенные localStorage и записывает лучший? Только как это сделать? Да  надо ли??))
             //    if(b[i])
             //  }
           }
