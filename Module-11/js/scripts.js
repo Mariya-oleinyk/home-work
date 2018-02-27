@@ -12,5 +12,4 @@ fetch(`http://fecore.net.ua/rest/`)
      }
    }); 
 }
-
 getUsers ();
